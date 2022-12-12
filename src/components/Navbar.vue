@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style scoped>
-.nav-container{
+.nav-container {
   flex-direction: column;
   margin-left: 25%;
   margin-top: 5%;
@@ -62,30 +62,34 @@ export default {
   width: 50vw;
 }
 
-.bar{
+.bar {
   width: 100%;
   flex-direction: row;
   justify-content: center;
 }
 
-.bar button{
+.bar button {
   width: 25%;
   background-color: transparent;
   border: 2px solid transparent;
   padding: 2% 5%;
 }
- .bar button, .new, .table button{
+
+.bar button,
+.new,
+.table button {
   cursor: pointer;
- }
-.bar button:active{
+}
+
+.bar button:active {
   border-bottom: 2px solid black;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.new{
+.new {
   border-radius: .3rem;
   border: 0px transparent;
   background-color: #E02B57;
@@ -97,31 +101,40 @@ export default {
   align-self: flex-end;
 }
 
-.table{
+.new:active {
+  background-color: #b82248;
+}
+
+.table {
   width: 100%;
   height: 100%;
   background-color: white;
 }
 
-table{
+table {
   flex-direction: column;
 }
-hr{
+
+hr {
   width: 100%;
   color: rgba(0, 0, 0, 0.29);
 }
 
-tr, .table table{
+tr,
+.table table {
   justify-content: space-between;
 }
 
-tr{
+tr, td {
   padding: 1.5% 0;
 }
-.center{
+
+.center {
   margin-left: -15%;
 }
-.table button{
+
+.table button {
   background-color: transparent;
   border: none;
-}</style>
+}
+</style>
