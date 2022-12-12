@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- aqui deve ir o Header -->
-    <!-- aqui deve ir a navbar -->
+    <Header></Header>
+    <Navbar></Navbar>
     <div class="view-container">
       <router-view/>
     </div>
@@ -16,7 +16,7 @@ export default {
   name: 'App',
   data() {
     return {
-      headerTitle: "UsuÃ¡rios"
+      headerTitle: "Usuarios"
     }
   },
   components: {
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style>
-/* SINTA-SE A VONTADE PARA ALTERAR ESSAS ESTILIZAÃ‡Ã•ES BASICAS */
+/* SINTA-SE A VONTADE PARA ALTERAR ESSAS ESTILIZAÇÕES BASICAS */
 * {
   margin: 0;
   padding: 0;
