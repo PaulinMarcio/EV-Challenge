@@ -4,19 +4,19 @@
       <button class="btn" id="bcad">CADASTRO</button>
       <button class="btn sel" id="blist">LISTAGEM</button>
     </div>
-    <button class="new" id="new" @click="teste()">Cadastrar novo usuario</button>
+    <button class="new" id="new" @click="change()">Cadastrar novo usuario</button>
     <div class="table" id="table">
       <table class="flex">
         <hr>
         <tr class="flex">
-          <th>Nome</th>
           <th>CPF</th>
+          <th>Nome</th>
           <th>Detalhes</th>
         </tr>
         <hr>
         <tr class="flex">
-          <td>Márcio Pires Paulin Junior</td>
-          <td class="center">111.111.111-11</td>
+          <td>111.111.111-11</td>
+          <td class="center">Márcio Pires Paulin Junior</td>
           <td>
             <button>
               <img src="../assets/details-eye.svg" alt="Mais detalhes">
@@ -24,8 +24,8 @@
           </td>
         </tr>
         <tr class="flex">
-          <td>Márcio Pires Paulin Junior</td>
-          <td class="center">111.111.111-11</td>
+          <td>111.111.111-11</td>
+          <td class="center">Márcio Pires Paulin Junior</td>
           <td>
             <button>
               <img src="../assets/details-eye.svg" alt="Mais detalhes">
@@ -33,8 +33,8 @@
           </td>
         </tr>
         <tr class="flex">
-          <td>Márcio Pires Paulin Junior</td>
-          <td class="center">111.111.111-11</td>
+          <td>111.111.111-11</td>
+          <td class="center">Márcio Pires Paulin Junior</td>
           <td>
             <button>
               <img src="../assets/details-eye.svg" alt="Mais detalhes">
@@ -65,7 +65,7 @@
 export default {
   name: 'Navbar',
   methods: {
-    teste() {
+    change() {
       document.getElementById("blist").classList.toggle("sel");
       document.getElementById("bcad").classList.toggle("sel");
       document.getElementById("table").classList.toggle("hidden");
@@ -109,7 +109,7 @@ export default {
   width: 25%;
   background-color: transparent;
   padding: 2% 5%;
-  border: none
+  border: none;
 }
 
 .bar button,
@@ -164,7 +164,7 @@ td {
 }
 
 .center {
-  margin-left: -15%;
+  margin-left: 3.5%;
 }
 
 .table button {
