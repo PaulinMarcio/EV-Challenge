@@ -1,11 +1,11 @@
 <template>
   <div class="nav-container flex">
     <div class="bar flex">
-      <button>CADASTRO</button>
-      <button>LISTAGEM</button>
+      <button class="btn" id="bcad">CADASTRO</button>
+      <button class="btn sel" id="blist">LISTAGEM</button>
     </div>
-    <button class="new">Cadastrar novo usuario</button>
-    <div class="table">
+    <button class="new" id="new" @click="teste()">Cadastrar novo usuario</button>
+    <div class="table" id="table">
       <table class="flex">
         <hr>
         <tr class="flex">
@@ -44,12 +44,41 @@
         <hr>
       </table>
     </div>
+    <div class="hidden" id="cadastro">
+      <h3>Insira seus dados:</h3>
+      <form>
+        <label for="username">Nome:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="cpf">CPF:</label><br>
+        <input type="text" id="cpf" name="cpf"><br>
+        <label for="tel">Telefone:</label><br>
+        <input type="text" id="tel" name="tel"><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Navbar',
+  methods: {
+    teste() {
+      document.getElementById("blist").classList.toggle("sel");
+      document.getElementById("bcad").classList.toggle("sel");
+      document.getElementById("table").classList.toggle("hidden");
+      document.getElementById("cadastro").classList.toggle("hidden");
+      var x = document.getElementById("new");
+      if (x.innerHTML === "Cadastrar novo usuario"){
+        x.innerHTML = "Voltar";
+      }
+      else{
+        x.innerHTML = "Cadastrar novo usuario";
+      }
+    }
+  }
 }
 </script>
 
@@ -68,21 +97,25 @@ export default {
   justify-content: center;
 }
 
-.bar button {
+.hidden {
+  display: none;
+}
+
+.sel {
+  border-bottom: 2px solid black;
+}
+
+.btn {
   width: 25%;
   background-color: transparent;
-  border: 2px solid transparent;
   padding: 2% 5%;
+  border: none
 }
 
 .bar button,
 .new,
 .table button {
   cursor: pointer;
-}
-
-.bar button:active {
-  border-bottom: 2px solid black;
 }
 
 .flex {
@@ -95,7 +128,7 @@ export default {
   background-color: #E02B57;
   color: white;
   padding: 0 2%;
-  height: 3rem;
+  min-height: 3rem;
   width: 25%;
   margin: 2% 0;
   align-self: flex-end;
@@ -125,7 +158,8 @@ tr,
   justify-content: space-between;
 }
 
-tr, td {
+tr,
+td {
   padding: 1.5% 0;
 }
 

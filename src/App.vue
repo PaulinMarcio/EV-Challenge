@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style>
-/* SINTA-SE A VONTADE PARA ALTERAR ESSAS ESTILIZAÇÕES BASICAS */
+/* SINTA-SE A VONTADE PARA ALTERAR ESSAS ESTILIZAï¿½ï¿½ES BASICAS */
 * {
   margin: 0;
   padding: 0;
