@@ -34,4 +34,9 @@ export default {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+.view-container{
+  margin-left: 25%;
+  width: 50vw;
+}
 </style>

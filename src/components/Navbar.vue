@@ -5,83 +5,22 @@
       <p class="sel" id="blist">LISTAGEM</p>
     </div>
     <button class="new" id="new" @click="change()">Cadastrar novo usuario</button>
-    <section class="table" id="table">
-      <table class="flex">
-        <hr>
-        <tr class="flex">
-          <th>CPF</th>
-          <th>Nome</th>
-          <th>Detalhes</th>
-        </tr>
-        <hr>
-        <tr class="flex">
-          <td>111.111.111-11</td>
-          <td class="center">Márcio Pires Paulin Junior</td>
-          <td>
-            <button>
-              <img src="../assets/details-eye.svg" alt="Mais detalhes">
-            </button>
-          </td>
-        </tr>
-        <tr class="flex">
-          <td>111.111.111-11</td>
-          <td class="center">Márcio Pires Paulin Junior</td>
-          <td>
-            <button>
-              <img src="../assets/details-eye.svg" alt="Mais detalhes">
-            </button>
-          </td>
-        </tr>
-        <tr class="flex">
-          <td>111.111.111-11</td>
-          <td class="center">Márcio Pires Paulin Junior</td>
-          <td>
-            <button>
-              <img src="../assets/details-eye.svg" alt="Mais detalhes">
-            </button>
-          </td>
-        </tr>
-        <hr>
-      </table>
-    </section>
-
-    <section class="hidden" id="cadastro">
-      
-      <form>
-        <hr>
-        <h3>Insira seus dados:</h3>
-        <hr>
-        <span>
-          <label for="username">Nome:</label>
-          <input type="text" id="name" name="name"><br>
-        </span>
-
-        <span>
-          <label for="cpf">CPF:</label>
-          <input type="text" id="cpf" name="cpf"><br>
-        </span>
-
-        <span>
-          <input class="new" type="submit" value="Enviar">
-          <input class="new" type="reset" value="Limpar">
-        </span>
-
-        <hr>
-      </form>
-    </section>
   </div>
 </template>
 
 <script>
-
+import UsersList from "../views/UsersList.vue"
+import Register from "../views/Register.vue"
 export default {
   name: 'Navbar',
   methods: {
     change() {
       document.getElementById("blist").classList.toggle("sel");
       document.getElementById("bcad").classList.toggle("sel");
+
       document.getElementById("table").classList.toggle("hidden");
       document.getElementById("cadastro").classList.toggle("hidden");
+
       var x = document.getElementById("new");
       if (x.innerHTML === "Cadastrar novo usuario"){
         x.innerHTML = "Voltar";
@@ -99,7 +38,6 @@ export default {
   flex-direction: column;
   margin-left: 25%;
   margin-top: 5%;
-  height: 75vh;
   width: 50vw;
 }
 
@@ -125,12 +63,11 @@ export default {
   background-color: transparent;
   padding: 2% 5%;
   border: none;
-  
+  text-align: center;
 }
 
 .bar button,
-.new,
-.table button {
+.new{
   cursor: pointer;
 }
 
@@ -152,46 +89,4 @@ export default {
 
 .new:active {
   background-color: #b82248;
-}
-
-.table {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-}
-
-table {
-  flex-direction: column;
-}
-
-hr {
-  width: 100%;
-  color: rgba(0, 0, 0, 0.29);
-}
-
-tr,
-.table table {
-  justify-content: space-between;
-}
-
-tr,
-td {
-  padding: 1.5% 0;
-}
-
-.center {
-  margin-left: 3.5%;
-}
-
-.table button {
-  background-color: transparent;
-  border: none;
-}
-
-form{
-  display: grid;
-  column-count: 5;
-  row-gap: 10%;
-}
-
-</style>
+}</style>
