@@ -3858,10 +3858,10 @@
   dependencies:
     "yallist" "^4.0.0"
 
-"miragejs@^0.1.43":
-  "integrity" "sha512-BhkyxssOZ2i4JqRjWpRnUQu9AFAKHyft8dJbqsg/N64+gCn2vw6vRteMpTKXllLjCPOA9Os8PhGRVXlXs4Ojhw=="
-  "resolved" "https://registry.npmjs.org/miragejs/-/miragejs-0.1.43.tgz"
-  "version" "0.1.43"
+"miragejs@^0.1.46":
+  "integrity" "sha512-xmWiFaGamslyUqZt7tDd0kkjWa8Ow4I7ID/Gi8c+iCVibZyU+SAiIZNmUynnDGD1Q8g8nlydtzADnb5+21gwww=="
+  "resolved" "https://registry.npmjs.org/miragejs/-/miragejs-0.1.46.tgz"
+  "version" "0.1.46"
   dependencies:
     "@miragejs/pretender-node-polyfill" "^0.1.0"
     "inflected" "^2.0.4"

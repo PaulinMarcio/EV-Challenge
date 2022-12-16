@@ -1,11 +1,11 @@
 <template>
   <div class="nav-container flex">
     <div class="bar flex">
-      <button class="btn" id="bcad">CADASTRO</button>
-      <button class="btn sel" id="blist">LISTAGEM</button>
+      <p class="" id="bcad">CADASTRO</p>
+      <p class="sel" id="blist">LISTAGEM</p>
     </div>
     <button class="new" id="new" @click="change()">Cadastrar novo usuario</button>
-    <div class="table" id="table">
+    <section class="table" id="table">
       <table class="flex">
         <hr>
         <tr class="flex">
@@ -43,20 +43,32 @@
         </tr>
         <hr>
       </table>
-    </div>
-    <div class="hidden" id="cadastro">
-      <h3>Insira seus dados:</h3>
+    </section>
+
+    <section class="hidden" id="cadastro">
+      
       <form>
-        <label for="username">Nome:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="cpf">CPF:</label><br>
-        <input type="text" id="cpf" name="cpf"><br>
-        <label for="tel">Telefone:</label><br>
-        <input type="text" id="tel" name="tel"><br>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
+        <hr>
+        <h3>Insira seus dados:</h3>
+        <hr>
+        <span>
+          <label for="username">Nome:</label>
+          <input type="text" id="name" name="name"><br>
+        </span>
+
+        <span>
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf"><br>
+        </span>
+
+        <span>
+          <input class="new" type="submit" value="Enviar">
+          <input class="new" type="reset" value="Limpar">
+        </span>
+
+        <hr>
       </form>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -101,15 +113,19 @@ export default {
   display: none;
 }
 
-.sel {
-  border-bottom: 2px solid black;
+.sel
+{
+  color: black !important;
+  border-bottom: 2px solid black !important;
 }
 
-.btn {
+.bar p {
   width: 25%;
+  color: gray;
   background-color: transparent;
   padding: 2% 5%;
   border: none;
+  
 }
 
 .bar button,
@@ -171,4 +187,11 @@ td {
   background-color: transparent;
   border: none;
 }
+
+form{
+  display: grid;
+  column-count: 5;
+  row-gap: 10%;
+}
+
 </style>
