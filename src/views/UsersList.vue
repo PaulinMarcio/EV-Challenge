@@ -12,7 +12,7 @@
       </thead>
       <tbody id="conteudo">
         <tr>
-          <td>Sem dados, insira um dado através do botão "Cadastrar novo usuário".</td>
+          <td>Sem dados, insira um usuário através do botão "Cadastrar novo usuário".</td>
         </tr>
       </tbody>
     </table>
@@ -23,7 +23,6 @@
 import axios from 'axios'
 export default {
   name: 'UsersList',
-
 }
 </script>
 

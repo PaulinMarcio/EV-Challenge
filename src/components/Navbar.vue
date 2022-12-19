@@ -11,12 +11,17 @@
 <script>
 export default {
   name: 'Navbar',
+  created() {
+        this.$root.$refs.A = this;
+    },
   methods: {
+
     change() {
       document.getElementById("blist").classList.toggle("sel");
       document.getElementById("bcad").classList.toggle("sel");
       
       var x = document.getElementById("new");
+
 
       if (x.innerHTML === "Cadastrar novo usuario"){
         x.innerHTML = "Voltar";

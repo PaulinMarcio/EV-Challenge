@@ -18,7 +18,7 @@
       <br>
 
       <span class="right">
-        <input class="new" type="submit" value="Enviar">
+        <input class="new" type="submit" value="Enviar" @click="change()">
         <input class="new" type="reset" value="Limpar">
       </span>
       <br>
@@ -32,11 +32,14 @@
 export default {
   name: 'Register',
   methods: {
-    data(){
-      return{
-        user:[],
-        cpfuser:"",
-        username:"",
+    change() {
+      this.$root.$refs.A.change();
+    },
+    data() {
+      return {
+        user: [],
+        cpfuser: "",
+        username: "",
       }
     }
   }
