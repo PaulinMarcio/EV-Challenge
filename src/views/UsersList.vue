@@ -2,14 +2,19 @@
   <section class="" id="table">
     <hr>
     <table class="flex">
-
-      <tr class="flex">
-        <th>CPF</th>
-        <th>Nome</th>
-        <th>Detalhes</th>
-      </tr>
-      <hr>
-      
+      <thead>
+        <tr class="flex">
+          <th>CPF</th>
+          <th>Nome</th>
+          <th>Detalhes</th>
+        </tr>
+        <hr>
+      </thead>
+      <tbody id="conteudo">
+        <tr>
+          <td>Sem dados, insira um dado através do botão "Cadastrar novo usuário".</td>
+        </tr>
+      </tbody>
     </table>
   </section>
 </template>
@@ -18,7 +23,7 @@
 import axios from 'axios'
 export default {
   name: 'UsersList',
-  
+
 }
 </script>
 

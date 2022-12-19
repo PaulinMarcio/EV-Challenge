@@ -13,7 +13,7 @@
 
       <span>
         <label for="cpf">CPF:</label>
-        <input v-model="cpfUser" v-mask="'###.###.###-##'" type="text" id="cpf" name="cpf"><br>
+        <input v-model="cpfuser" v-mask="'###.###.###-##'" type="text" id="cpf" name="cpf"><br>
       </span>
       <br>
 
@@ -34,7 +34,9 @@ export default {
   methods: {
     data(){
       return{
-        cpfUser:"",
+        user:[],
+        cpfuser:"",
+        username:"",
       }
     }
   }
