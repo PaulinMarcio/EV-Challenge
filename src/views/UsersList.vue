@@ -9,34 +9,7 @@
         <th>Detalhes</th>
       </tr>
       <hr>
-      <tr class="flex">
-        <td>111.111.111-11</td>
-        <td class="center">Márcio Pires Paulin Junior</td>
-        <td>
-          <button>
-            <img src="../assets/details-eye.svg" alt="Mais detalhes">
-          </button>
-        </td>
-      </tr>
-      <tr class="flex">
-        <td>111.111.111-11</td>
-        <td class="center">Márcio Pires Paulin Junior</td>
-        <td>
-          <button>
-            <img src="../assets/details-eye.svg" alt="Mais detalhes">
-          </button>
-        </td>
-      </tr>
-      <tr class="flex">
-        <td>111.111.111-11</td>
-        <td class="center">Márcio Pires Paulin Junior</td>
-        <td>
-          <button>
-            <img src="../assets/details-eye.svg" alt="Mais detalhes">
-          </button>
-        </td>
-      </tr>
-      <hr>
+      
     </table>
   </section>
 </template>
@@ -44,7 +17,8 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'UsersList'
+  name: 'UsersList',
+  
 }
 </script>
 
@@ -79,9 +53,11 @@ table button {
   border: none;
   cursor: pointer;
 }
-.hidden{
+
+.hidden {
   display: none;
 }
+
 .flex {
   display: flex;
 }

@@ -9,24 +9,22 @@
 </template>
 
 <script>
-import UsersList from "../views/UsersList.vue"
-import Register from "../views/Register.vue"
 export default {
   name: 'Navbar',
   methods: {
     change() {
       document.getElementById("blist").classList.toggle("sel");
       document.getElementById("bcad").classList.toggle("sel");
-
-      document.getElementById("table").classList.toggle("hidden");
-      document.getElementById("cadastro").classList.toggle("hidden");
-
+      
       var x = document.getElementById("new");
+
       if (x.innerHTML === "Cadastrar novo usuario"){
         x.innerHTML = "Voltar";
+        this.$router.push('/register');
       }
       else{
         x.innerHTML = "Cadastrar novo usuario";
+        this.$router.push('/');
       }
     }
   }
