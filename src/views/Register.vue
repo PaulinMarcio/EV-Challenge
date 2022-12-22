@@ -1,57 +1,75 @@
 <template>
   <section class="" id="cadastro">
-
     <form>
-      <hr>
+      <hr />
       <h3>Insira seus dados:</h3>
-      <hr>
+      <hr />
       <span>
-        <label for="username">Nome:</label>
-        <input type="text" id="name" name="name"><br>
+        <label for="name">Nome:</label>
+        <input v-model="name" type="text" id="name" name="name" />
+        <br />
       </span>
-      <br>
+      <br />
 
       <span>
         <label for="cpf">CPF:</label>
-        <input v-model="cpfuser" v-mask="'###.###.###-##'" type="text" id="cpf" name="cpf"><br>
+        <input
+          v-model="cpf"
+          v-mask="'###.###.###-##'"
+          type="text"
+          id="cpf"
+          name="cpf"
+        /><br />
       </span>
-      <br>
+      <br />
 
       <span class="right">
-        <input class="new" type="submit" value="Enviar" @click="change()">
-        <input class="new" type="reset" value="Limpar">
+        <input class="new" type="submit" value="Enviar" @click="postUser" />
+        <input class="new" type="reset" value="Limpar" />
       </span>
-      <br>
+      <br />
 
-      <hr>
+      <hr />
     </form>
   </section>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'Register',
+  name: "Register",
+
   methods: {
-    change() {
+
+    postUser() {
+      axios
+        .post("/api/users", { fullname: this.name, cpf: this.cpf })
+        .then(() => {
+          console.log("Usuário cadastrado com sucesso");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       this.$root.$refs.A.change();
     },
-    data() {
-      return {
-        user: [],
-        cpfuser: "",
-        username: "",
-      }
-    }
-  }
-}
+  },
+
+  data() {
+    return {
+      dataUsers: [],
+      cpf: "",
+      name: "",
+    };
+  },
+};
 </script>
 
 <style scoped>
 .new {
   cursor: pointer;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   border: 0px transparent;
-  background-color: #E02B57;
+  background-color: #e02b57;
   color: white;
   padding: 0 2%;
   min-height: 3rem;

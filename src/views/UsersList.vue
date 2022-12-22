@@ -1,6 +1,6 @@
 <template>
   <section class="" id="table">
-    <hr>
+    <hr />
     <table class="flex">
       <thead>
         <tr class="flex">
@@ -8,27 +8,49 @@
           <th>Nome</th>
           <th>Detalhes</th>
         </tr>
-        <hr>
+        <hr />
       </thead>
-      <tbody id="conteudo">
+      <tbody v-for="user in users" :key="user.id" id="conteudo" class="flex">
         <tr>
-          <td>Sem dados, insira um usuário através do botão "Cadastrar novo usuário".</td>
+          <td>{{ user.cpf }}</td>
+          <td class="center">{{ user.fullname }}</td>
+          <td>
+            <button class="">
+              <img src="../assets/details-eye.svg" alt="icone detalhe" />
+            </button>
+          </td>
         </tr>
+        <br />
       </tbody>
     </table>
   </section>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
-  name: 'UsersList',
-}
+  name: "UsersList",
+
+  data() {
+    return {
+      users: [],
+      cpf: "",
+    };
+  },
+
+  mounted() {
+    axios
+      .get("http://localhost:8080/api/users")
+      .then((response) => {
+        this.users = response.data.users;
+      })
+      .catch((err) => console.log(err));
+  },
+};
 </script>
 
 <style scoped>
 table {
-  display: flex;
   height: 100%;
   background-color: white;
   flex-direction: column;
@@ -43,16 +65,24 @@ hr {
   color: rgba(0, 0, 0, 0.29);
 }
 
+tr {
+  display: inline-flex;
+}
+
 tr,
 table {
   justify-content: space-between;
 }
 
-.center {
-  margin-left: 3.5%;
+tbody {
+  flex-direction: column;
 }
 
-table button {
+.center {
+  margin-right: 2%;
+}
+
+td button {
   background-color: transparent;
   border: none;
   cursor: pointer;
