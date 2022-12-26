@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- aqui deve ir o Header -->
-    <!-- aqui deve ir a navbar -->
+    <Header></Header>
+    <Navbar></Navbar>
     <div class="view-container">
       <router-view/>
     </div>
@@ -16,7 +16,7 @@ export default {
   name: 'App',
   data() {
     return {
-      headerTitle: "Usuários"
+      headerTitle: "Usuarios"
     }
   },
   components: {
@@ -27,11 +27,16 @@ export default {
 </script>
 
 <style>
-/* SINTA-SE A VONTADE PARA ALTERAR ESSAS ESTILIZAÇÕES BASICAS */
+/* SINTA-SE A VONTADE PARA ALTERAR ESSAS ESTILIZA��ES BASICAS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+.view-container{
+  margin-left: 25%;
+  width: 50vw;
 }
 </style>
